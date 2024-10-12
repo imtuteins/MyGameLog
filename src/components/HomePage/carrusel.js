@@ -1,6 +1,22 @@
-import React from "react";
+import React,{useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 const Carrusel=()=>{
+
+    const [searchValue, setSearchValue]=useState('');
+    const navigate=useNavigate();
+    const handleInputChange=(e)=>{
+        setSearchValue(e.target.value);
+    };
+    const handleKeyDown=(e)=>{
+        if(e.key=== 'Enter'){
+            navigate(`/search?search=${encodeURIComponent(searchValue)}`);
+        }
+    }
+    const handleClick=()=>{
+        navigate(`/search?search=${encodeURIComponent(searchValue)}`);
+    }
+
     return(
         <div className="container">
                     <div id="caja_primera" className="p-4 p-md-3 position-relative">
@@ -50,9 +66,9 @@ const Carrusel=()=>{
                                                 </path>
                                             </svg>
                                         </div>
-                                        <input type="search" placeholder="Search for a game" className="border-0 text-white custom-input" style={{backgroundColor: '#1a1a32', color: '#9393c8', borderRadius: 0, width: '100%', minWidth: '10rem'}} aria-label="Search for a game" value=""/>
+                                        <input type="search" placeholder="Search for a game" className="border-0 text-white custom-input" style={{backgroundColor: '#1a1a32', color: '#9393c8', borderRadius: 0, width: '100%', minWidth: '10rem'}} aria-label="Search for a game" value={searchValue} onChange={handleInputChange} onKeyDown={handleKeyDown}/>
                                         <div className="d-flex align-items-center justify-content-center border-0 pe-1" style={{backgroundColor: '#1a1a32', borderTopRightRadius: '0.75rem', borderBottomRightRadius: '0.75rem'}}>
-                                            <button id="btn-search" type="button" className="d-flex align-items-center justify-content-center fw-bold text-white" style={{borderRadius: '0.5rem', height: '2.5rem', paddingLeft: '1rem', paddingRight: '1rem', minWidth: '6rem', maxWidth: '480px', cursor: 'pointer', overflow: 'hidden'}}>
+                                            <button id="btn-search" type="button" className="d-flex align-items-center justify-content-center fw-bold text-white" style={{borderRadius: '0.5rem', height: '2.5rem', paddingLeft: '1rem', paddingRight: '1rem', minWidth: '6rem', maxWidth: '480px', cursor: 'pointer', overflow: 'hidden'}} onClick={handleClick}>
                                                 <span className="text-truncate">Search</span>
                                             </button>
                                         </div>

@@ -132,3 +132,18 @@
     }
 }
 
+.centrar_elementos{
+    display:flex;
+    justify-content: center;
+}
+
+.bajar_barra_busqueda{
+    margin-top:5rem;
+}
+
+@media (max-width:560px){
+    .bajar_barra_busqueda{
+        margin-top: 7rem;
+    }
+}
+
