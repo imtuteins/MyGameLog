@@ -3,6 +3,7 @@ import Head from "./head";
 import Header from "./header";
 import Footer from "./footer";
 import { Outlet } from "react-router-dom";
+import LoginModal from "../Login_Register/AuthModal";
 
 const Layout=()=>{
     return(
@@ -13,6 +14,7 @@ const Layout=()=>{
                 <Outlet/>
             </main>
             <Footer/>
+            <LoginModal/>
         </>
     )
 }

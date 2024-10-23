@@ -1,8 +1,14 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import { useModal } from "../Login_Register/ModalContext";
+import { useState } from 'react';
+import { Modal } from "react-bootstrap";
 
 
 const Header=()=>{
+    const { showModal } = useModal();
+
     return(
         <header className="navbar fixed-top d-flex justify-content-between align-items-center border-bottom border-dark px-3 py-2" style={{backgroundColor: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(10px)'}}>
             <div className="d-flex align-items-center text-white" style={{gap: '1rem' }}>
@@ -16,22 +22,23 @@ const Header=()=>{
                     <h1 onMouseOver={(e) => e.currentTarget.style.color = 'lightgray'} onMouseOut={(e) => e.currentTarget.style.color = 'white'} className="h5 fw-bolder mt-2" style={{ color: 'white', letterSpacing: '-0.015em' }}>MyGameLog</h1>
                 </Link>
             </div>
-        
+            
             <div className="d-flex flex-grow-1 justify-content-end" style={{ gap: '0.5rem' }}>
                 <div className="d-flex align-items-center" style={{gap: '1rem' }}>
-                    <a className="text-white small fw-medium text-decoration-none" href="#">My Lists</a>
+                    <Link to="mylists" className="text-white small fw-medium text-decoration-none d-flex align-items-center justify-content-center overflow-hidden rounded-3" style={{minWidth: '84px', maxWidth: '480px', height: '2.5rem', paddingLeft: '1rem', paddingRight: '1rem', backgroundColor: '#572a82'}} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#411f61'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#572a82'} >My Lists</Link>
                 </div>
-                <div className="d-flex" style={{ gap: '0.5rem' }}>
-                    <button className="btn d-flex align-items-center justify-content-center overflow-hidden rounded-3 text-white fw-bold" style={{minWidth: '84px', maxWidth: '480px', height: '2.5rem', paddingLeft: '1rem', paddingRight: '1rem', backgroundColor: '#6116a8'}} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#3a0d64'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#6116a8'}>
-                        <span className="text-truncate">Login</span>
-                    </button>
-                    <button className="btn d-flex align-items-center justify-content-center overflow-hidden rounded-3 text-white fw-bold" style={{minWidth: '84px', maxWidth: '480px', height: '2.5rem', paddingLeft: '1rem', paddingRight: '1rem', backgroundColor: '#6116a8'}} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#70508d'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#a073ca'}>
-                        <span className="text-truncate">Signup</span>
-                    </button>
-                </div>
-                
+
                 <div className="d-flex align-items-center" style={{ gap: '0.5rem' }}>
                     <Link to="/search" className="d-flex align-items-center small fw-bolder rounded-3 h-10 px-4 text-white bg-custom-purple text-decoration-none" style={{backgroundColor: '#7b2e97', height: '2.5rem'}} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#562069'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#7b2e97'}>Search Game</Link>
+                </div>
+
+                <div className="d-flex" style={{ gap: '0.5rem' }}>
+                    <button className="btn d-flex align-items-center overflow-hidden text-white" style={{borderRadius:'50%', Width: '40px', height: '40px', backgroundColor: '#6116a8'}} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#3a0d64'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#6116a8'} onClick={() => showModal('auth')}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16" >
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                    </svg>
+                    </button>
                 </div>
             </div>
         </header>
