@@ -55,8 +55,8 @@ const LoginForm = ({ onSubmit }) => {
                                 </svg>
                             )}
                         </InputGroup.Text>
+                        <Form.Control.Feedback type="invalid">Please provide a password.</Form.Control.Feedback>
                     </InputGroup>
-                    <Form.Control.Feedback type="invalid">Please provide a password.</Form.Control.Feedback>
                 </Form.Group>
 
                 <Button variant="primary" type="submit" style={{marginLeft:"3rem", marginTop: '20px' , width: '75%', backgroundColor: '#6c63ff', border: 'none' }}>

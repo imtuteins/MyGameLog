@@ -23,7 +23,7 @@ const AuthModal=()=>{
     };
     return(
         <>
-        <Modal show={modal === 'auth'} onHide={handleClose}>
+        <Modal show={modal === 'auth'} onHide={handleClose} >
             <Modal.Header closeButton style={{backgroundColor:"#220d2e"}}>
                 <Modal.Title className="w-100 text-center text-white">
                     {isLogin ? 'Login to manage your lists!' : 'Register on our website!'}
