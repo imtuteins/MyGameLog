@@ -11,7 +11,7 @@ const Header=()=>{
 
     return(
         <header className="navbar fixed-top d-flex justify-content-between align-items-center border-bottom border-dark px-3 py-2" style={{backgroundColor: 'rgba(255, 255, 255, 0.05)', backdropFilter: 'blur(10px)'}}>
-            <div className="d-flex align-items-center text-white" style={{gap: '1rem' }}>
+            <div id="header-home" className="d-flex align-items-center text-white" style={{gap: '1rem' }}>
                 <div style={{height: '1rem'}}>
                     <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} fill="currentColor" className="bi bi-controller" viewBox="0 0 16 16">
                         <path d="M11.5 6.027a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m2.5-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m-1.5 1.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1m-6.5-3h1v1h1v1h-1v1h-1v-1h-1v-1h1z"/>
@@ -23,7 +23,7 @@ const Header=()=>{
                 </Link>
             </div>
             
-            <div className="d-flex flex-grow-1 justify-content-end" style={{ gap: '0.5rem' }}>
+            <div id="header-buttons" className="d-flex flex-grow-1" style={{ gap: '0.5rem' }}>
                 <div className="d-flex align-items-center" style={{gap: '1rem' }}>
                     <Link to="mylists" className="text-white small fw-medium text-decoration-none d-flex align-items-center justify-content-center overflow-hidden rounded-3" style={{minWidth: '84px', maxWidth: '480px', height: '2.5rem', paddingLeft: '1rem', paddingRight: '1rem', backgroundColor: '#572a82'}} onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#411f61'} onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#572a82'} >My Lists</Link>
                 </div>

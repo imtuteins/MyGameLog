@@ -158,7 +158,16 @@ input:focus, textarea:focus, select:focus {
     border-color: none !important;
 }
 
+#header-buttons{
+    justify-content: end;
+}
 
+@media (max-width:456px){
+    #header-buttons{
+        justify-content: space-evenly;
+        margin-top: 5px;
+    }
+}
 
 
 

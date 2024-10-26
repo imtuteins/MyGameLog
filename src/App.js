@@ -12,23 +12,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
-  const isLoggedIn= true; //Por ahora en lo que se hace el formulario de log in y eso se deja por defecto true
+  const isLoggedIn=true; //Se mantiene true por ahora mientras se implementa la validacion con la base de datos
   return (
-    <ModalProvider>  
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout/>}>
-            <Route index element={<HomeBody/>}/>
-            <Route path="/search" element={<SearchPage/>}/>
-            <Route path="/game/:gameName" element={<GameDetails/>}/>
-            <Route path="*" element={<PageNotFound/>}/>
-            {isLoggedIn && (
-              <Route path="/mylists" element={<MyLists/>}/>
-            )}
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </ModalProvider>
+      
+      <ModalProvider>  
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout/>}>
+              <Route index element={<HomeBody/>}/>
+              <Route path="/search" element={<SearchPage/>}/>
+              <Route path="/game/:gameName" element={<GameDetails/>}/>
+              <Route path="*" element={<PageNotFound/>}/>
+              {isLoggedIn && (<Route path="/mylists" element={<MyLists/>}/>)}   
+              
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </ModalProvider>        
   );
 }
 
