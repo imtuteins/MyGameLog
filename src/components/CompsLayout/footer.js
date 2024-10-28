@@ -1,4 +1,8 @@
 import React from "react";
+import danielrueda from "../../Imagenes/fotodanielrueda.jpeg";
+import danielleal from "../../Imagenes/fotodanielleal.jpeg";
+import kevingarcia from "../../Imagenes/fotokevin.jpeg";
+import josequintero from "../../Imagenes/fotojosequintero.jpg"
 
 const Footer=()=>{
     return(
@@ -12,7 +16,7 @@ const Footer=()=>{
                             {/* <!-- Team Member 1 --> */}
                             <div className="col-md-3 mb-2">
                                 <div className="card bg-secondary text-white text-center">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlie4MsQ9pJSSKY7DoEpxn3uBAq-rT7in1sA&s" alt="img" className="rounded-circle mx-auto d-block mt-3" style={{width: '100px', height: '100px'}}/>
+                                    <img src={danielrueda} alt="img" className="rounded-circle mx-auto d-block mt-3" style={{width: '100px', height: '100px'}}/>
                                     <div className="card-body">
                                         <h5 className="card-title">Daniel Rueda</h5>
                                         <p >Developer</p>
@@ -24,7 +28,7 @@ const Footer=()=>{
                             {/* <!--Team Member 2 --> */}
                             <div className="col-md-3 mb-2">
                                 <div className="card bg-secondary text-white text-center">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlie4MsQ9pJSSKY7DoEpxn3uBAq-rT7in1sA&s" alt="img" className="rounded-circle mx-auto d-block mt-3" style={{width: '100px', height: '100px'}}/>
+                                    <img src={josequintero} alt="img" className="rounded-circle mx-auto d-block mt-3" style={{width: '100px', height: '100px'}}/>
                                     <div className="card-body">
                                         <h5 className="card-title">Jose Quintero</h5>
                                         <p >Developer</p>
@@ -36,11 +40,11 @@ const Footer=()=>{
                             {/* <!-- Team Member 3 --> */}
                             <div className="col-md-3 mb-2">
                                 <div className="card bg-secondary text-white text-center">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlie4MsQ9pJSSKY7DoEpxn3uBAq-rT7in1sA&s" alt="img" className="rounded-circle mx-auto d-block mt-3" style={{width: '100px', height: '100px'}}/>
+                                    <img src={danielleal} alt="img" className="rounded-circle mx-auto d-block mt-3" style={{width: '100px', height: '100px'}}/>
                                     <div className="card-body">
                                         <h5 className="card-title">Daniel Leal</h5>
                                         <p >Developer</p>
-                                        <p style={{fontSize: '0.65rem'}}>daniellealaya@gmail.com</p>
+                                        <p style={{fontSize: '0.65rem'}}>daniellealaya102@gmail.com</p>
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +52,7 @@ const Footer=()=>{
                             {/* <!-- Team Member 4 --> */}
                             <div className="col-md-3 mb-2">
                                 <div className="card bg-secondary text-white text-center">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlie4MsQ9pJSSKY7DoEpxn3uBAq-rT7in1sA&s" alt="img" className="rounded-circle mx-auto d-block mt-3" style={{width: '100px', height: '100px'}}/>
+                                    <img src={kevingarcia} alt="img" className="rounded-circle mx-auto d-block mt-3" style={{width: '100px', height: '100px'}}/>
                                     <div className="card-body">
                                         <h5 className="card-title">Kevin García</h5>
                                         <p >Developer</p>
